@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.creatingGame.LobbyController">
+   <children>
+      <Button fx:id="refresh" layoutX="725.0" layoutY="138.0" mnemonicParsing="false" onAction="#refreshbutton" text="Odśwież" />
+      <ListView fx:id="listview" prefHeight="530.0" prefWidth="700.0" />
+      <Button fx:id="joinbutton" layoutX="725.0" layoutY="178.0" mnemonicParsing="false" onAction="#join" prefHeight="25.0" prefWidth="60.0" text="Dołącz" />
+      <Label layoutX="713.0" layoutY="38.0" text="Wpisz swój nick" />
+      <TextField fx:id="nick" layoutX="713.0" layoutY="70.0" prefHeight="25.0" prefWidth="83.0" />
+   </children>
+</Pane>

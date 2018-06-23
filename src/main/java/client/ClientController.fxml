@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="313.0" prefWidth="344.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.ClientController">
+   <children>
+      <Label layoutX="135.0" layoutY="27.0" text="Gra Go" textAlignment="CENTER" underline="true">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="CreateGameButton" layoutX="124.0" layoutY="138.0" mnemonicParsing="false" onAction="#CreateGame" prefHeight="25.0" prefWidth="97.0" text="Utwórz grę" />
+      <Button fx:id="JoinToGameButton" layoutX="124.0" layoutY="172.0" mnemonicParsing="false" onAction="#JoinToGame" prefHeight="25.0" prefWidth="97.0" text="Dołącz do gry" />
+      <Button fx:id="ExitButton" layoutX="124.0" layoutY="205.0" mnemonicParsing="false" onAction="#ExitAction" prefHeight="25.0" prefWidth="97.0" text="Wyjście" />
+      <Button fx:id="BotButton" layoutX="124.0" layoutY="105.0" mnemonicParsing="false" onAction="#PlayWithBot" prefHeight="25.0" prefWidth="97.0" text="Zagraj z botem" />
+   </children>
+</Pane>

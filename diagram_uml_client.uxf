@@ -1,0 +1,814 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="14.2">
+  <zoom_level>6</zoom_level>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>804</x>
+      <y>0</y>
+      <w>324</w>
+      <h>432</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame.Boards::GameModel
+--
+~pawns: Pawn[][]
++rectTable: Rect[][]
++territory: Rectangle[][]
+~alivepawns: Circle[][]
++oppalivepawns: Circle[][]
+~deadpawns: Circle[][]
++oppdeadpawns: Circle[][]
+~possible: int[][]
++lobbycomm: LobbyCommunication
+~boardSize: int
+--
++GameModel(int boardSize, LobbyCommunication lobbyCommunication): ctor
++createrect(Pane pane, Button[] buttons, Label[] labels): void
++opponentProposeTerritory(Pane pane): void
++opponentLeftGame(Button[] buttons): void
++prepareMapAfterResign(Button[] buttons): void
++opponentPlacePawn(Pane pane, String answer): void
++prepareMapAfterResume(Pane pane): void
++sendpawn(int xx, int yy, int x, int y, Pane pane, Button[] buttons, Label[] labels): void
++getpawn(Pane pane, String answer): void
++removepawn(Pane pane, int x, int y): void
++sendready(): String
++waittoopponent(): String
++waittostart(): String
++removeTerritory(Pane pane, int x, int y): void
++ispossibleteritory(int x, int y): void
++proposeTerritory(Pane pane): void
++getTerritory(Pane pane, int x, int y): void
++sendpassed(Pane pane, Button[] buttons, Label[] labels): void
++sendterritory(Pane pane, Button[] buttons, Label[] labels): void
++removeDeadPawns(Pane pane, int x, int y): void
++removeAlivePawns(Pane pane, int x, int y): void
++rejectterritory(Pane pane, Button[] buttons): void
++acceptterritory(Button[] buttons, Label[] labels): void
++getAlivePawns(Pane pane, int x, int y): void
++getDeadPawns(Pane pane, int x, int y): void
++resume(Pane pane, Button[] buttons, Label[] labels): void
++resign(Pane pane, Button[] buttons): void
++ErrorWindow(String message, Button button): void
++InfoWindow(String message, Button button): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>444</x>
+      <y>600</y>
+      <w>282</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame.Boards::Game13x13Controller
+--
++pane: Pane
++StartButton: Button
++OpponentPoints: Label
++WhiteName: Label
++BlackName: Label
++PlayersPoints: Label
++g13x13Model = new GameModel(13, Client1.servercomm): GameModel
++passbutton: Button
++proposeteritory: Button
++rejectterritory: Button
++acceptterritory: Button
++resumegame: Button
++resignbutton: Button
+~table[]: Button
+~label[]: Label
+--
++StartButtonAction(ActionEvent actionEvent): void
++onpassaction(ActionEvent actionEvent): void
++initialize(URL location, ResourceBundle resources): void
++ProposeTerritory(ActionEvent actionEvent): void
++RejectTerritory(ActionEvent actionEvent): void
++AcceptTerritory(ActionEvent actionEvent): void
++Resumegame(ActionEvent actionEvent): void
++resign(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>780</x>
+      <y>600</y>
+      <w>282</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame.Boards::Game19x19Controller
+--
++pane: Pane
++StartButton: Button
++OpponentPoints: Label
++WhiteName: Label
++BlackName: Label
++PlayersPoints: Label
++g19x19Model = new GameModel(19, Client1.servercomm): GameModel
++passbutton: Button
++proposeteritory: Button
++rejectterritory: Button
++acceptterritory: Button
++resumegame: Button
++resignbutton: Button
+~table[]: Button
+~label[]: Label
+--
++StartButtonAction(ActionEvent actionEvent): void
++onpassaction(ActionEvent actionEvent): void
++initialize(URL location, ResourceBundle resources): void
++ProposeTerritory(ActionEvent actionEvent): void
++RejectTerritory(ActionEvent actionEvent): void
++AcceptTerritory(ActionEvent actionEvent): void
++Resumegame(ActionEvent actionEvent): void
++resign(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1116</x>
+      <y>600</y>
+      <w>270</w>
+      <h>270</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame.Boards::Game9x9Controller
+--
++pane: Pane
++StartButton: Button
++OpponentPoints: Label
++WhiteName: Label
++BlackName: Label
++PlayersPoints: Label
++g9x9Model = new GameModel(9, Client1.servercomm): GameModel
++passbutton: Button
++proposeteritory: Button
++rejectterritory: Button
++acceptterritory: Button
++resumegame: Button
++resignbutton: Button
+~table[]: Button
+~label[]: Label
+--
++StartButtonAction(ActionEvent actionEvent): void
++onpassaction(ActionEvent actionEvent): void
++initialize(URL location, ResourceBundle resources): void
++ProposeTerritory(ActionEvent actionEvent): void
++RejectTerritory(ActionEvent actionEvent): void
++AcceptTerritory(ActionEvent actionEvent): void
++Resumegame(ActionEvent actionEvent): void
++resign(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>294</x>
+      <y>1122</y>
+      <w>480</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::Game
+--
++PlayerName: String
+~GameName: String
+~OpponentName: String
++Playercolor: Color
++OpponentColor: Color
++isproposing: boolean
++playerpassed: boolean
++opponentpassed: boolean
++oppacceptterritory: boolean
++placceptterritory: boolean
++possible: boolean
++type: String
++PlayerPoints: double
++OpponentPoints: double
+--
++Game(String playername, String gamename, String opponentname, Color opponentColor, Color playercolor, String typ): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>660</x>
+      <y>1368</y>
+      <w>348</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::CreateBotGameController
+--
++Rbutton19: RadioButton
++AcceptButton: Button
++Rbutton13: RadioButton
++Rbutton9: RadioButton
++NickTField: TextField
++TableName: TextField
++group: ToggleGroup
++pane: Pane
+-createGBModel = new CreateBotGameModel(Client1.servercomm): CreateBotGameModel
+--
++Rbutton19OnAction(ActionEvent actionEvent): void
++Rbutton9OnAction(ActionEvent actionEvent): void
++Rbutton13OnAction(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1074</x>
+      <y>1368</y>
+      <w>318</w>
+      <h>156</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::CreateGameController
+--
++Rbutton19: RadioButton
++AcceptButton: Button
++Rbutton13: RadioButton
++Rbutton9: RadioButton
++NickTField: TextField
++TableName: TextField
++group: ToggleGroup
++pane: Pane
+-createGModel = new CreateGameModel(Client1.servercomm): CreateGameModel
+--
++Rbutton19OnAction(ActionEvent actionEvent): void
++Rbutton9OnAction(ActionEvent actionEvent): void
++Rbutton13OnAction(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>540</x>
+      <y>1710</y>
+      <w>180</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>client::ClientController
+--
++CreateGameButton: Button
++JoinToGameButton: Button
++ExitButton: Button
++BotButton: Button
+~Cmodel = new ClientModel(): ClientModel
+--
++CreateGame(ActionEvent actionEvent): void
++JoinToGame(ActionEvent actionEvent): void
++ExitAction(ActionEvent actionEvent): void
++PlayWithBot(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>330</x>
+      <y>1386</y>
+      <w>246</w>
+      <h>126</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::LobbyController
+--
++pane: Pane
++refresh: Button
++lmodel = new LobbyModel(Client1.servercomm): LobbyModel
++listview: ListView
++joinbutton: Button
++nick: TextField
+--
++refreshbutton(ActionEvent actionEvent): void
++initialize(URL location, ResourceBundle resources): void
++join(ActionEvent actionEvent): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>0</x>
+      <y>1152</y>
+      <w>258</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::LobbyModel
+--
++lobbycomm: LobbyCommunication
+~parameters: String[]
+~ob = FXCollections.observableArrayList(): ObservableList&lt;String&gt;
+--
+~LobbyModel(LobbyCommunication lobbyCommunication): ctor
++getList(ListView listView): void
++jointogame(String gamename, String nick, Button joinbutton): void
++createmap(String nick): void
++ErrorWindow(String message, Button button): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>834</x>
+      <y>1146</y>
+      <w>288</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::CreateBotGameModel
+--
+~lobbycomm: LobbyCommunication
+~nicksended: boolean
+--
+~CreateBotGameModel(LobbyCommunication lobbyCommunication): ctor
++createmap(String type): void
++sendNick(String nick): String
++sendNewGame(String GameName, String Type): String
++ErrorWindow(String message, Button button): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1152</x>
+      <y>1146</y>
+      <w>276</w>
+      <h>108</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::CreateGameModel
+--
+~lobbycomm: LobbyCommunication
+~nicksended: boolean
+--
+~CreateGameModel(LobbyCommunication lobbyCommunication): ctor
++createmap(String type): void
++sendNick(String nick): String
++sendNewGame(String GameName, String Type): String
++ErrorWindow(String message, Button button): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>954</x>
+      <y>1596</y>
+      <w>192</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>client::LobbyCommunication
+--
++in: BufferedReader
++out: PrintWriter
++socket: Socket
+~pane: Pane
+--
++LobbyCommunication(String host, int port): ctor
++checkVersion(): String
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1242</x>
+      <y>354</y>
+      <w>246</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame.Boards::Pawn
+--
++circle: Circle
+~pxx: int
+~pxy: int
++color1: Color
+--
++Pawn(Pane pane, int pxx, int pxy, int x, int y, Color color): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>1242</x>
+      <y>216</y>
+      <w>306</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame.Boards::Rect
+--
++rect: Rectangle
+~light: Lighting
++px1: int
++py1: int
+--
++Rect(Pane pane, int pxx, int pxy, int x, int y, Button[] table1, Label[] label): ctor
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>762</x>
+      <y>1596</y>
+      <w>150</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>client::Client1
+--
++instance: Client1
++servercomm: LobbyCommunication
+--
+~Client1(): ctor
++init(): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>564</x>
+      <y>1566</y>
+      <w>156</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>client::ClientModel
+--
+--
++createNewGame(Button button): void
++joinGame(Button button): void
++playWithBot(Button button): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>570</x>
+      <y>1884</y>
+      <w>132</w>
+      <h>54</h>
+    </coordinates>
+    <panel_attributes>client::ClientGUI
+--
+--
++start(Stage primaryStage): void
++main(String[] args): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLClass</id>
+    <coordinates>
+      <x>756</x>
+      <y>954</y>
+      <w>132</w>
+      <h>42</h>
+    </coordinates>
+    <panel_attributes>client.creatingGame::CreateMap
+--
+--
++createmap(String type): void
+--
+</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>1830</y>
+      <w>18</w>
+      <h>66</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>624</x>
+      <y>1626</y>
+      <w>18</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>1620</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>906</x>
+      <y>1632</y>
+      <w>60</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>80.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>450</x>
+      <y>1506</y>
+      <w>126</w>
+      <h>114</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;160.0;190.0;160.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>678</x>
+      <y>1518</y>
+      <w>18</w>
+      <h>60</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>714</x>
+      <y>1518</y>
+      <w>492</w>
+      <h>84</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>800.0;10.0;800.0;110.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>942</x>
+      <y>1248</y>
+      <w>18</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1218</x>
+      <y>1248</y>
+      <w>18</w>
+      <h>132</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;200.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>156</x>
+      <y>966</y>
+      <w>612</w>
+      <h>198</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>1000.0;10.0;10.0;10.0;10.0;310.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>102</x>
+      <y>1260</y>
+      <w>240</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0;380.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>846</x>
+      <y>990</y>
+      <w>390</w>
+      <h>168</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;140.0;630.0;140.0;630.0;260.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>804</x>
+      <y>990</y>
+      <w>42</w>
+      <h>210</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;320.0;50.0;320.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>882</x>
+      <y>864</y>
+      <w>318</w>
+      <h>120</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>510.0;10.0;510.0;170.0;10.0;170.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>822</x>
+      <y>864</y>
+      <w>18</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>606</x>
+      <y>864</y>
+      <w>174</w>
+      <h>102</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;90.0;270.0;90.0;270.0;150.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>930</x>
+      <y>426</y>
+      <w>18</w>
+      <h>186</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;290.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>378</y>
+      <w>36</w>
+      <h>234</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;40.0;10.0;40.0;370.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>672</x>
+      <y>396</y>
+      <w>144</w>
+      <h>216</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>220.0;10.0;10.0;10.0;10.0;340.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1122</x>
+      <y>264</y>
+      <w>132</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=...
+m2=1</panel_attributes>
+    <additional_attributes>200.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>1338</x>
+      <y>294</y>
+      <w>18</w>
+      <h>72</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;100.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>252</x>
+      <y>1230</y>
+      <w>54</w>
+      <h>24</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>70.0;10.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>690</x>
+      <y>1302</y>
+      <w>18</w>
+      <h>78</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>768</x>
+      <y>1284</y>
+      <w>366</w>
+      <h>96</h>
+    </coordinates>
+    <panel_attributes>lt=&lt;-
+m1=1
+m2=1</panel_attributes>
+    <additional_attributes>10.0;10.0;590.0;10.0;590.0;140.0</additional_attributes>
+  </element>
+</diagram>

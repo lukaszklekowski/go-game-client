@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Line?>
+
+<Pane fx:id="pane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="530.0" prefWidth="800.0" style="-fx-background-color: goldenrod;" xmlns="http://javafx.com/javafx/8.0.112" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.creatingGame.Boards.Game19x19Controller">
+   <children>
+      <Line endX="40.0" endY="490.0" focusTraversable="true" startX="40.0" startY="40.0" strokeType="OUTSIDE">
+         <effect>
+            <Blend />
+         </effect>
+      </Line>
+      <Line endX="65.0" endY="490.0" startX="65.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="90.0" endY="490.0" startX="90.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="115.0" endY="490.0" startX="115.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="140.0" endY="490.0" startX="140.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="165.0" endY="490.0" startX="165.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="190.0" endY="490.0" startX="190.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="215.0" endY="490.0" startX="215.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="240.0" endY="490.0" startX="240.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="265.0" endY="490.0" startX="265.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="290.0" endY="490.0" startX="290.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="315.0" endY="490.0" startX="315.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="340.0" endY="490.0" startX="340.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="365.0" endY="490.0" startX="365.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="390.0" endY="490.0" startX="390.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="415.0" endY="490.0" startX="415.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="440.0" endY="490.0" startX="440.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="465.0" endY="490.0" startX="465.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="490.0" startX="490.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="40.0" startX="40.0" startY="40.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="65.0" startX="40.0" startY="65.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="90.0" startX="40.0" startY="90.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="115.0" startX="40.0" startY="115.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="140.0" startX="40.0" startY="140.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="165.0" startX="40.0" startY="165.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="190.0" startX="40.0" startY="190.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="215.0" startX="40.0" startY="215.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="240.0" startX="40.0" startY="240.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="265.0" startX="40.0" startY="265.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="290.0" startX="40.0" startY="290.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="315.0" startX="40.0" startY="315.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="340.0" startX="40.0" startY="340.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="365.0" startX="40.0" startY="365.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="390.0" startX="40.0" startY="390.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="415.0" startX="40.0" startY="415.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="440.0" startX="40.0" startY="440.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="465.0" startX="40.0" startY="465.0" strokeType="OUTSIDE" />
+      <Line endX="490.0" endY="490.0" startX="40.0" startY="490.0" strokeType="OUTSIDE" />
+      <Label fx:id="ColorofPawns" layoutX="585.0" layoutY="58.0" text="Czarne" />
+      <Label fx:id="ColorofPawns1" layoutX="688.0" layoutY="58.0" text="Białe" />
+      <Label fx:id="BlackName" alignment="BOTTOM_CENTER" layoutX="546.0" layoutY="81.0" prefHeight="17.0" prefWidth="90.0" />
+      <Label fx:id="WhiteName" alignment="BOTTOM_CENTER" layoutX="671.0" layoutY="81.0" prefHeight="17.0" prefWidth="90.0" />
+      <Label layoutX="546.0" layoutY="116.0" text="Punkty:" />
+      <Label layoutX="671.0" layoutY="116.0" text="Punkty:" />
+      <Label fx:id="PlayersPoints" alignment="BOTTOM_CENTER" layoutX="587.0" layoutY="116.0" prefHeight="17.0" prefWidth="39.0" />
+      <Label fx:id="OpponentPoints" alignment="BOTTOM_CENTER" layoutX="716.0" layoutY="116.0" prefHeight="17.0" prefWidth="39.0" />
+      <Button fx:id="StartButton" layoutX="609.0" layoutY="214.0" mnemonicParsing="false" onAction="#StartButtonAction" prefHeight="25.0" prefWidth="76.0" text="Start" />
+      <Button fx:id="passbutton" layoutX="609.0" layoutY="252.0" mnemonicParsing="false" onAction="#onpassaction" text="Pomiń ruch" />
+      <Button fx:id="resignbutton" layoutX="609.0" layoutY="289.0" mnemonicParsing="false" onAction="#resign" prefHeight="25.0" prefWidth="76.0" text="Poddaj się" />
+      <Button fx:id="proposeteritory" layoutX="585.0" layoutY="329.0" mnemonicParsing="false" onAction="#ProposeTerritory" prefHeight="25.0" prefWidth="129.0" text="Proponuj terytorium" visible="false" />
+      <Button fx:id="rejectterritory" layoutX="585.0" layoutY="366.0" mnemonicParsing="false" onAction="#RejectTerritory" prefHeight="25.0" prefWidth="129.0" text="Odrzuć Terytorium" visible="false" />
+      <Button fx:id="acceptterritory" layoutX="585.0" layoutY="404.0" mnemonicParsing="false" onAction="#AcceptTerritory" prefHeight="25.0" prefWidth="129.0" text="Akceptuj terytorium" visible="false" />
+      <Button fx:id="resumegame" layoutX="585.0" layoutY="439.0" mnemonicParsing="false" onAction="#Resumegame" prefHeight="25.0" prefWidth="129.0" text="Wznów grę" visible="false" />
+   </children>
+</Pane>
